@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #113d022a;
+  font-family: "Bahnschrift", Times, serif;
+}
+
+/* Header */
+/* Navigation bar */
+.nav-pan {
+  display: flex;
+  align-items: center;
+  background-color: #27471c;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 80px;
+  box-shadow: 0px 4px 12px 0px #001b07;
+}
+
+.nav-list_img img {
+  width: 208px;
+  margin-right: 2em;
+  background-color: #18360e36;
+}
+
+.nav-list > ul {
+  align-items: center;
+  display: flex;
+  list-style: none;
+}
+
+.nav-list > ul > li {
+  margin-right: 2em;
+}
+
+.nav-list a {
+  font-family: "Bahnschrift", Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.2em;
+  text-decoration: none;
+  color: white;
+}
+
+/* Links which work */
+.nav-list a:hover {
+  color: rgb(167, 166, 166);
+  transition: color 0.1s ease-in;
+}
+
+.link-active a {
+  color: rgb(167, 166, 166);
+}
+
+/* Links which don't work */
+.link-inactive a:hover {
+  color: rgb(31, 30, 30);
+  transition: color 0.1s ease-in;
+}
+
+.link-inactive a:hover::after {
+  content: "У розробці";
+  position: absolute;
+  display: block;
+  z-index: 1;
+  background-color: white;
+  border: 1px solid black;
+  padding: 5px;
+  font-size: 12px;
+}
+
+.link-inactive a {
+  color: rgb(31, 30, 30);
+  font-weight: normal;
+}
+
+/* Footer */
+.footer {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-family: "Bahnschrift", Times, serif;
+  background-color: #1d1d1d;
+  box-shadow: 0px -4px 3px 0px #181818;
+  margin-top: 3em;
+  padding: 1em;
+  color: white;
+  text-align: center;
+  align-items: center;
+}
+
+.footer_rights {
+  grid-column: 3;
+}
+
+.footer_contact {
+  grid-column: 4;
+}
+
+.footer_contact_img img {
+  width: 40px;
+  margin-top: 0.25em;
+  margin-left: 0.25em;
+  margin-right: 0.25em;
+  cursor: pointer;
+}
+
+.footer_contact_img img:hover {
+  transform: scale(1.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.footer_back {
+  grid-column: 5;
+}
+
+.footer_back a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.footer_btn {
+  padding: 0.5em;
+  border-radius: 0.5em;
+  font-family: "Bahnschrift", Times, serif;
+  color: white;
+  background-color: #1d1d1d;
+  cursor: pointer;
+}
+
+.nav-drop {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .nav-list a {
+    font-size: 0.79em;
+  }
+  .nav-list_img img {
+    width: 137px;
+    margin-right: 2em;
+  }
+}
+
+@media (max-width: 1028px) {
+  .footer_rights {
+    font-size: 0.53em;
+  }
+  .footer_contact {
+    font-size: 0.53em;
+  }
+  .footer_contact_img img {
+    width: 21px;
+  }
+  .footer_btn {
+    font-size: 0.53em;
+  }
+}
+
+@media (max-width: 960px) {
+  .nav-pan {
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav-list {
+    display: none;
+  }
+
+  .nav-drop {
+    display: block;
+  }
+
+  .nav-btn {
+    display: block;
+    font-size: 1.5em;
+    margin-right: 1.5em;
+    padding-inline: 10px;
+    padding-bottom: 3px;
+    border: none;
+    background-color: #18360e36;
+    color: white;
+    cursor: pointer;
+  }
+
+  .nav-btn:hover {
+    background-color: rgb(40, 47, 37);
+  }
+
+  .nav-list_burger {
+    display: none;
+  }
+
+  .nav-list_burger a {
+    display: block;
+    padding: 1em;
+    text-decoration: none;
+    color: white;
+  }
+
+  .nav-drop:hover .nav-list_burger {
+    display: block;
+    position: absolute;
+    margin-top: 0em;
+    right: 1px;
+    background-color: rgb(40, 47, 37);
+    border-radius: 0.5em;
+  }
+}
